@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head><title>feedpflaster</title></head>
+
+<body>
+
+    {% for c in channels %}
+        <h1><a href="{{c.link}}">{{c.title}}</a></h1>
+        {% for i in c.items %}
+            <p><a href="{{i.link}}" title="">{{i.title}}</a></p>
+        {% endfor %}
+    {% endfor %}
+
+</body>
+
+</html>
