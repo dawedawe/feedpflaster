@@ -1,4 +1,4 @@
-PROXY = '127.0.0.1:8123'
+PROXY = ''  # 127.0.0.1:8123 for example
 
 FEEDS = [
     'http://www.heise.de/newsticker/heise-atom.xml',
