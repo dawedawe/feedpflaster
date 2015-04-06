@@ -21,7 +21,8 @@ class Feed():
 
     def get_raw(self):
         if self.proxyurl is not None:
-            prox_handler = urllib.request.ProxyHandler({'http': self.proxyurl})
+            prox_handler = urllib.request.ProxyHandler({'http': self.proxyurl,
+                                                        'https': self.proxyurl})
             opener = urllib.request.build_opener(prox_handler)
             urllib.request.install_opener(opener)
         response = urllib.request.urlopen(self.url)
